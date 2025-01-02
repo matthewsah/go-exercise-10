@@ -4,7 +4,13 @@
 // could add numbers of different types
 package add
 
+import "golang.org/x/exp/constraints"
+
+type Number interface {
+	constraints.Float | constraints.Integer
+}
+
 // Add takes in two numbers and returns their sum
-func Add(num1 int, num2 int) int {
+func Add[N Number](num1 N, num2 N) N {
 	return num1 + num2
 }

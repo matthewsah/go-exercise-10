@@ -8,5 +8,6 @@ import (
 
 func main() {
 	fmt.Println("hello")
-	fmt.Println(add.Add(1, 2))
+	y := 12.4
+	fmt.Println(add.Add(1, y))
 }
